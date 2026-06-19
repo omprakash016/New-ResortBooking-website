@@ -6,7 +6,10 @@ const authRouter=require("./routes/auth.router");
 const hotelRouter=require("./routes/listing.router");
 const bookingRouter=require("./routes/booking.auth");
 app.use(cors({
-  origin: true,
+  origin: [
+    "http://localhost:5173",
+    "https://new-resort-booking-website-ocxq.vercel.app/"
+  ],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
