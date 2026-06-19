@@ -13,6 +13,9 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(cookieParser());
+app.get("/", (req, res) => {
+  res.send("Backend Running Successfully");
+});
 
 app.use("/api/auth",authRouter);
 
