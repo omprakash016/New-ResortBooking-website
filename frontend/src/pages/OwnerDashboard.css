@@ -1,0 +1,103 @@
+.dashboard-page {
+  padding: 2rem 0;
+}
+
+.dashboard-page__header,
+.dashboard-card,
+.empty-state,
+.loading-screen {
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-page__title {
+  margin: 0;
+}
+
+.dashboard-hotels-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.dashboard-hotel-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 220px;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 1rem;
+}
+
+.dashboard-hotel-row__img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.dashboard-hotel-row__actions button {
+  margin-right: 0.5rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  width: 100%;
+  max-width: 760px;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.dashboard-bookings-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.dashboard-booking-row {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 1rem;
+  align-items: center;
+}
+
+.dashboard-booking-row__user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.dashboard-booking-row__dates {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.dashboard-booking-row__right {
+  text-align: right;
+}
+
+.dashboard-booking-row__price {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-booking-row__actions {
+  margin-top: 0.5rem;
+}
+
+.dashboard-booking-row__actions button {
+  margin-left: 0.5rem;
+}
