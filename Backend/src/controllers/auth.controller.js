@@ -28,8 +28,9 @@ const register=async(req,res)=>{
          );
         res.cookie("token",token, {
             httpOnly: true,
-            secure: false, // Set to true in production with HTTPS
-            sameSite: 'lax'
+            secure: true, // Set to true in production with HTTPS
+            sameSite: 'none',
+            maxAge: 7 * 24 * 60 * 60 * 1000
         });
         return res.status(201).json({message:"User is created Successfully",user:{
              id:user._id,
@@ -65,8 +66,9 @@ const login=async(req,res)=>{
          );
       res.cookie("token",token, {
         httpOnly: true,
-        secure: false, // Set to true in production with HTTPS
-        sameSite: 'lax'
+        secure: true, // Set to true in production with HTTPS
+        sameSite: 'none',
+        maxAge: 7 * 24 * 60 * 60 * 1000
       });
     return res.status(201).json({message:"You login Successfully Successfully",user:{
              id:user._id,
@@ -84,7 +86,11 @@ const login=async(req,res)=>{
     }
 
 const logout=async(req,res)=>{
-    res.clearCookie("token");
+    res.clearCookie("token", {
+    httpOnly: true,
+    secure: true,
+    sameSite: "none"
+  });
     res.status(200).send({message:"You are logged out"});
 }
 
